@@ -10,7 +10,6 @@
 struct Entity {
     Vec3 pos; //m
     Vec3 velocity; //m*s^-1
-    Vec3 force; //N
     float mass; //kg
 
     Entity(Vec3 pos, Vec3 velocity, float mass);
