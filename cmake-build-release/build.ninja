@@ -51,35 +51,35 @@ build cmake_object_order_depends_target_Gravity: phony || CMakeFiles/Gravity.dir
 
 build CMakeFiles/Gravity.dir/main.cpp.o: CXX_COMPILER__Gravity_Release /home/kis/server/Projekte/Gravity/main.cpp || cmake_object_order_depends_target_Gravity
   DEP_FILE = CMakeFiles/Gravity.dir/main.cpp.o.d
-  FLAGS = -lX11 -lGL -lpthread -lpng -lstdc++fs -O3 -march=native -mtune=native -mavx -fpermissive -std=gnu++20
+  FLAGS = -lX11 -lGL -lpthread -lpng -lstdc++fs -O3 -march=native -mtune=native -mavx -std=gnu++20
   INCLUDES = -I/home/kis/server/Projekte/Gravity/. -isystem /usr/include/eigen3
   OBJECT_DIR = CMakeFiles/Gravity.dir
   OBJECT_FILE_DIR = CMakeFiles/Gravity.dir
 
 build CMakeFiles/Gravity.dir/Model/World.cpp.o: CXX_COMPILER__Gravity_Release /home/kis/server/Projekte/Gravity/Model/World.cpp || cmake_object_order_depends_target_Gravity
   DEP_FILE = CMakeFiles/Gravity.dir/Model/World.cpp.o.d
-  FLAGS = -lX11 -lGL -lpthread -lpng -lstdc++fs -O3 -march=native -mtune=native -mavx -fpermissive -std=gnu++20
+  FLAGS = -lX11 -lGL -lpthread -lpng -lstdc++fs -O3 -march=native -mtune=native -mavx -std=gnu++20
   INCLUDES = -I/home/kis/server/Projekte/Gravity/. -isystem /usr/include/eigen3
   OBJECT_DIR = CMakeFiles/Gravity.dir
   OBJECT_FILE_DIR = CMakeFiles/Gravity.dir/Model
 
 build CMakeFiles/Gravity.dir/View/Renderer.cpp.o: CXX_COMPILER__Gravity_Release /home/kis/server/Projekte/Gravity/View/Renderer.cpp || cmake_object_order_depends_target_Gravity
   DEP_FILE = CMakeFiles/Gravity.dir/View/Renderer.cpp.o.d
-  FLAGS = -lX11 -lGL -lpthread -lpng -lstdc++fs -O3 -march=native -mtune=native -mavx -fpermissive -std=gnu++20
+  FLAGS = -lX11 -lGL -lpthread -lpng -lstdc++fs -O3 -march=native -mtune=native -mavx -std=gnu++20
   INCLUDES = -I/home/kis/server/Projekte/Gravity/. -isystem /usr/include/eigen3
   OBJECT_DIR = CMakeFiles/Gravity.dir
   OBJECT_FILE_DIR = CMakeFiles/Gravity.dir/View
 
 build CMakeFiles/Gravity.dir/Utility/Vec3.cpp.o: CXX_COMPILER__Gravity_Release /home/kis/server/Projekte/Gravity/Utility/Vec3.cpp || cmake_object_order_depends_target_Gravity
   DEP_FILE = CMakeFiles/Gravity.dir/Utility/Vec3.cpp.o.d
-  FLAGS = -lX11 -lGL -lpthread -lpng -lstdc++fs -O3 -march=native -mtune=native -mavx -fpermissive -std=gnu++20
+  FLAGS = -lX11 -lGL -lpthread -lpng -lstdc++fs -O3 -march=native -mtune=native -mavx -std=gnu++20
   INCLUDES = -I/home/kis/server/Projekte/Gravity/. -isystem /usr/include/eigen3
   OBJECT_DIR = CMakeFiles/Gravity.dir
   OBJECT_FILE_DIR = CMakeFiles/Gravity.dir/Utility
 
 build CMakeFiles/Gravity.dir/Model/Entity.cpp.o: CXX_COMPILER__Gravity_Release /home/kis/server/Projekte/Gravity/Model/Entity.cpp || cmake_object_order_depends_target_Gravity
   DEP_FILE = CMakeFiles/Gravity.dir/Model/Entity.cpp.o.d
-  FLAGS = -lX11 -lGL -lpthread -lpng -lstdc++fs -O3 -march=native -mtune=native -mavx -fpermissive -std=gnu++20
+  FLAGS = -lX11 -lGL -lpthread -lpng -lstdc++fs -O3 -march=native -mtune=native -mavx -std=gnu++20
   INCLUDES = -I/home/kis/server/Projekte/Gravity/. -isystem /usr/include/eigen3
   OBJECT_DIR = CMakeFiles/Gravity.dir
   OBJECT_FILE_DIR = CMakeFiles/Gravity.dir/Model
@@ -93,7 +93,7 @@ build CMakeFiles/Gravity.dir/Model/Entity.cpp.o: CXX_COMPILER__Gravity_Release /
 # Link the executable Gravity
 
 build Gravity: CXX_EXECUTABLE_LINKER__Gravity_Release CMakeFiles/Gravity.dir/main.cpp.o CMakeFiles/Gravity.dir/Model/World.cpp.o CMakeFiles/Gravity.dir/View/Renderer.cpp.o CMakeFiles/Gravity.dir/Utility/Vec3.cpp.o CMakeFiles/Gravity.dir/Model/Entity.cpp.o
-  FLAGS = -lX11 -lGL -lpthread -lpng -lstdc++fs -O3 -march=native -mtune=native -mavx -fpermissive
+  FLAGS = -lX11 -lGL -lpthread -lpng -lstdc++fs -O3 -march=native -mtune=native -mavx
   OBJECT_DIR = CMakeFiles/Gravity.dir
   POST_BUILD = :
   PRE_LINK = :

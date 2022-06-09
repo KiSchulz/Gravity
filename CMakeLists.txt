@@ -9,7 +9,7 @@ endif ()
 
 set(CMAKE_CXX_FLAGS "-lX11 -lGL -lpthread -lpng -lstdc++fs") #flags for olcPixelGameEngine
 set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g -fno-omit-frame-pointer")
-set(CMAKE_CXX_FLAGS_RELEASE "-O3 -march=native -mtune=native -mavx -fpermissive")
+set(CMAKE_CXX_FLAGS_RELEASE "-O3 -march=native -mtune=native -mavx")
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Eigen3 3.3 REQUIRED NO_MODULE)
