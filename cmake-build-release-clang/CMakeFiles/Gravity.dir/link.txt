@@ -1,1 +1,0 @@
-/usr/bin/clang++ -lX11 -lGL -lpthread -lpng -lstdc++fs -O3 -march=native -mtune=native -mavx -fpermissive CMakeFiles/Gravity.dir/main.cpp.o CMakeFiles/Gravity.dir/Model/World.cpp.o CMakeFiles/Gravity.dir/View/Renderer.cpp.o CMakeFiles/Gravity.dir/Utility/Vec3.cpp.o CMakeFiles/Gravity.dir/Model/Entity.cpp.o -o Gravity 
