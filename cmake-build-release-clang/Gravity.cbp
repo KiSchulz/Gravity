@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Gravity"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\share\;CMake Files\..\..\..\..\..\usr\share\eigen3\;CMake Files\..\..\..\..\..\usr\share\eigen3\cmake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/kis/server/Projekte/Gravity/cmake-build-release-clang"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/kis/server/Projekte/Gravity/cmake-build-release-clang/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/kis/server/Projekte/Gravity/cmake-build-release-clang/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/kis/server/Projekte/Gravity/cmake-build-release-clang/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/kis/server/Projekte/Gravity/cmake-build-release-clang/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Gravity">
+				<Option output="/home/kis/server/Projekte/Gravity/cmake-build-release-clang/Gravity" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kis/server/Projekte/Gravity/cmake-build-release-clang"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/home/kis/server/Projekte/Gravity/."/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/backward"/>
+					<Add directory="/usr/lib/clang/13.0.1/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/kis/server/Projekte/Gravity/cmake-build-release-clang/Makefile&quot;  VERBOSE=1 Gravity"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/kis/server/Projekte/Gravity/cmake-build-release-clang/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/kis/server/Projekte/Gravity/cmake-build-release-clang/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/kis/server/Projekte/Gravity/cmake-build-release-clang/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Gravity/fast">
+				<Option output="/home/kis/server/Projekte/Gravity/cmake-build-release-clang/Gravity" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kis/server/Projekte/Gravity/cmake-build-release-clang"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/home/kis/server/Projekte/Gravity/."/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/backward"/>
+					<Add directory="/usr/lib/clang/13.0.1/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/kis/server/Projekte/Gravity/cmake-build-release-clang/Makefile&quot;  VERBOSE=1 Gravity/fast"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/kis/server/Projekte/Gravity/cmake-build-release-clang/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/kis/server/Projekte/Gravity/cmake-build-release-clang/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/kis/server/Projekte/Gravity/cmake-build-release-clang/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/kis/server/Projekte/Gravity/cmake-build-release-clang"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/kis/server/Projekte/Gravity/cmake-build-release-clang/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/kis/server/Projekte/Gravity/cmake-build-release-clang/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/kis/server/Projekte/Gravity/cmake-build-release-clang/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/kis/server/Projekte/Gravity/cmake-build-release-clang/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/kis/server/Projekte/Gravity/cmake-build-release-clang"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/kis/server/Projekte/Gravity/cmake-build-release-clang/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/kis/server/Projekte/Gravity/cmake-build-release-clang/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/kis/server/Projekte/Gravity/cmake-build-release-clang/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/kis/server/Projekte/Gravity/cmake-build-release-clang/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/kis/server/Projekte/Gravity/Generator/BaseGenerator.h">
+			<Option target="Gravity"/>
+		</Unit>
+		<Unit filename="/home/kis/server/Projekte/Gravity/Generator/TestingGenerator.h">
+			<Option target="Gravity"/>
+		</Unit>
+		<Unit filename="/home/kis/server/Projekte/Gravity/Model/Entity.cpp">
+			<Option target="Gravity"/>
+		</Unit>
+		<Unit filename="/home/kis/server/Projekte/Gravity/Model/Entity.h">
+			<Option target="Gravity"/>
+		</Unit>
+		<Unit filename="/home/kis/server/Projekte/Gravity/Model/World.cpp">
+			<Option target="Gravity"/>
+		</Unit>
+		<Unit filename="/home/kis/server/Projekte/Gravity/Model/World.h">
+			<Option target="Gravity"/>
+		</Unit>
+		<Unit filename="/home/kis/server/Projekte/Gravity/Utility/Vec3.cpp">
+			<Option target="Gravity"/>
+		</Unit>
+		<Unit filename="/home/kis/server/Projekte/Gravity/Utility/Vec3.h">
+			<Option target="Gravity"/>
+		</Unit>
+		<Unit filename="/home/kis/server/Projekte/Gravity/View/Renderer.cpp">
+			<Option target="Gravity"/>
+		</Unit>
+		<Unit filename="/home/kis/server/Projekte/Gravity/View/Renderer.h">
+			<Option target="Gravity"/>
+		</Unit>
+		<Unit filename="/home/kis/server/Projekte/Gravity/main.cpp">
+			<Option target="Gravity"/>
+		</Unit>
+		<Unit filename="/home/kis/server/Projekte/Gravity/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/kis/server/Projekte/Gravity/../../../../../usr/share/eigen3/cmake/Eigen3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\share\eigen3\cmake\"/>
+		</Unit>
+		<Unit filename="/home/kis/server/Projekte/Gravity/../../../../../usr/share/eigen3/cmake/Eigen3ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\share\eigen3\cmake\"/>
+		</Unit>
+		<Unit filename="/home/kis/server/Projekte/Gravity/../../../../../usr/share/eigen3/cmake/Eigen3Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\share\eigen3\cmake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

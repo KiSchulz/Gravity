@@ -1,0 +1,3 @@
+/home/kis/server/Projekte/Gravity/cmake-build-debug/CMakeFiles/Gravity.dir
+/home/kis/server/Projekte/Gravity/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/kis/server/Projekte/Gravity/cmake-build-debug/CMakeFiles/rebuild_cache.dir

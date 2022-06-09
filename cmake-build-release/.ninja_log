@@ -1,0 +1,8 @@
+# ninja log v5
+2	4493	1654787205000000000	CMakeFiles/Gravity.dir/main.cpp.o	c8426c7b88e652ee
+28	2150	1654617292000000000	CMakeFiles/Gravity.dir/View/Renderer.cpp.o	a335db804949fc9d
+1	251	1654787285000000000	build.ninja	ce8780adf527a932
+4495	4878	1654787205000000000	Gravity	f6d15aef39dfd0d1
+26	1831	1654615830000000000	CMakeFiles/Gravity.dir/Model/World.cpp.o	65f39793fb876a2a
+2	1754	1654614266000000000	CMakeFiles/Gravity.dir/Utility/Vec3.cpp.o	3d087ccc22082367
+8	1547	1654615424000000000	CMakeFiles/Gravity.dir/Model/Entity.cpp.o	783b471330d0f93c
