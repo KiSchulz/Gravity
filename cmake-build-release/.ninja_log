@@ -6,3 +6,8 @@
 26	1831	1654615830000000000	CMakeFiles/Gravity.dir/Model/World.cpp.o	65f39793fb876a2a
 2	1754	1654614266000000000	CMakeFiles/Gravity.dir/Utility/Vec3.cpp.o	3d087ccc22082367
 8	1547	1654615424000000000	CMakeFiles/Gravity.dir/Model/Entity.cpp.o	783b471330d0f93c
+2	1738	1654793925000000000	CMakeFiles/Gravity.dir/Model/Entity.cpp.o	783b471330d0f93c
+1	1916	1654793925000000000	CMakeFiles/Gravity.dir/Model/World.cpp.o	65f39793fb876a2a
+1	2175	1654793926000000000	CMakeFiles/Gravity.dir/View/Renderer.cpp.o	a335db804949fc9d
+1	4487	1654793928000000000	CMakeFiles/Gravity.dir/main.cpp.o	c8426c7b88e652ee
+4488	4669	1654793928000000000	Gravity	f6d15aef39dfd0d1
