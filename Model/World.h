@@ -8,7 +8,7 @@
 #include <vector>
 
 #include "Entity.h"
-#include "Utility/Vec3.h"
+#include <CL/cl.h>
 
 class World {
 public:
@@ -19,13 +19,10 @@ public:
 private:
     std::vector<Entity> entities;
 
-    Vec3 calcFG(std::size_t n, std::size_t m);
-
 public:
     explicit World(std::vector<Entity> entities);
 
     void step();
-    void removeEntities(float distance);
 
     [[nodiscard]] std::vector<Entity> getEntities() const;
 };

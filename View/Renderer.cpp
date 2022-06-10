@@ -37,9 +37,9 @@ void Renderer::UpdateScreen(float dt) {
 
     for (auto el: world.getEntities()) {
         if (flip) {
-            Draw(el.pos.x() + ScreenWidth() / 2, ScreenHeight() / 2 - el.pos.y());
+            Draw(el.pos.x + ScreenWidth() / 2, ScreenHeight() / 2 - el.pos.y);
         } else {
-            Draw(el.pos.x() + ScreenWidth() / 2, ScreenHeight() / 2 - el.pos.z());
+            Draw(el.pos.x + ScreenWidth() / 2, ScreenHeight() / 2 - el.pos.z);
         }
     }
 }
@@ -57,6 +57,5 @@ void Renderer::ReadKeys() {
 }
 
 void Renderer::UpdateWorld() {
-    world.removeEntities(2 * ScreenWidth());
     world.step();
 }

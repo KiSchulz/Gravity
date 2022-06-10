@@ -12,8 +12,8 @@ set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g -fno-omit-frame-pointer")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3 -march=native -mtune=native -mavx")
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Eigen3 3.3 REQUIRED NO_MODULE)
+find_package(OpenCL REQUIRED)
 
 add_executable(Gravity main.cpp Model/World.cpp Model/World.h View/Renderer.cpp View/Renderer.h Utility/Vec3.cpp Utility/Vec3.h Model/Entity.cpp Model/Entity.h Generator/BaseGenerator.h Generator/TestingGenerator.h)
 include_directories(.)
-target_link_libraries(Gravity Eigen3::Eigen)
+target_link_libraries(Gravity OpenCL::OpenCL)

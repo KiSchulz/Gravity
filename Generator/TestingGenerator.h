@@ -31,7 +31,7 @@ struct TestingGenerator : public BaseGenerator {
 
             float x = dirDistribution(rng);
             float y = dirDistribution(rng);
-            float z = (-x * relPos.x() - y * relPos.y()) / relPos.z();
+            float z = (-x * relPos.x - y * relPos.y) / relPos.z;
 
             Vec3 dir{x, y, z};
             dir.normalize();
