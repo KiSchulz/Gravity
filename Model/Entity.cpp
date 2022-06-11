@@ -3,8 +3,3 @@
 //
 
 #include "Entity.h"
-
-#include <utility>
-
-Entity::Entity(Vec3 pos, Vec3 velocity, float mass) : pos(std::move(pos)), velocity(std::move(velocity)), mass(mass) {
-}

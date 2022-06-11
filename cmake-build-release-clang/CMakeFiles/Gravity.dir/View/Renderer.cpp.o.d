@@ -281,6 +281,7 @@ CMakeFiles/Gravity.dir/View/Renderer.cpp.o: \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/bits/fs_ops.h \
   /usr/include/X11/X.h /usr/include/X11/Xlib.h \
   /usr/include/X11/Xfuncproto.h /usr/include/X11/Xosdefs.h \
-  /home/kis/server/Projekte/Gravity/./Model/World.h \
+  /home/kis/server/Projekte/Gravity/./Model/World.cuh \
+  /opt/cuda/include/vector_types.h /opt/cuda/include/crt/host_defines.h \
   /home/kis/server/Projekte/Gravity/./Model/Entity.h \
   /home/kis/server/Projekte/Gravity/./Utility/Vec3.h

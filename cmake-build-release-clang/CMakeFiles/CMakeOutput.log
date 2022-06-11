@@ -822,3 +822,61 @@ Parsed CUDA implicit link information from above output:
   implicit fwks: []
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/kis/server/Projekte/Gravity/cmake-build-release-clang/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_6ece5/fast && /usr/bin/make  -f CMakeFiles/cmTC_6ece5.dir/build.make CMakeFiles/cmTC_6ece5.dir/build
+make[1]: Verzeichnis „/home/kis/server/Projekte/Gravity/cmake-build-release-clang/CMakeFiles/CMakeTmp“ wird betreten
+Building CXX object CMakeFiles/cmTC_6ece5.dir/CheckIncludeFile.cxx.o
+/usr/bin/clang++   -lX11 -lGL -lpthread -lpng -lstdc++fs  -std=gnu++20 -MD -MT CMakeFiles/cmTC_6ece5.dir/CheckIncludeFile.cxx.o -MF CMakeFiles/cmTC_6ece5.dir/CheckIncludeFile.cxx.o.d -o CMakeFiles/cmTC_6ece5.dir/CheckIncludeFile.cxx.o -c /home/kis/server/Projekte/Gravity/cmake-build-release-clang/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+clang-13: warning: -lX11: 'linker' input unused [-Wunused-command-line-argument]
+clang-13: warning: -lGL: 'linker' input unused [-Wunused-command-line-argument]
+clang-13: warning: -lpthread: 'linker' input unused [-Wunused-command-line-argument]
+clang-13: warning: -lpng: 'linker' input unused [-Wunused-command-line-argument]
+clang-13: warning: -lstdc++fs: 'linker' input unused [-Wunused-command-line-argument]
+Linking CXX executable cmTC_6ece5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6ece5.dir/link.txt --verbose=1
+/usr/bin/clang++ -lX11 -lGL -lpthread -lpng -lstdc++fs  CMakeFiles/cmTC_6ece5.dir/CheckIncludeFile.cxx.o -o cmTC_6ece5 
+make[1]: Verzeichnis „/home/kis/server/Projekte/Gravity/cmake-build-release-clang/CMakeFiles/CMakeTmp“ wird verlassen
+
+
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /home/kis/server/Projekte/Gravity/cmake-build-release-clang/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_c6291/fast && /usr/bin/make  -f CMakeFiles/cmTC_c6291.dir/build.make CMakeFiles/cmTC_c6291.dir/build
+make[1]: Verzeichnis „/home/kis/server/Projekte/Gravity/cmake-build-release-clang/CMakeFiles/CMakeTmp“ wird betreten
+Building CXX object CMakeFiles/cmTC_c6291.dir/src.cxx.o
+/usr/bin/clang++ -DCMAKE_HAVE_LIBC_PTHREAD  -lX11 -lGL -lpthread -lpng -lstdc++fs  -std=gnu++20 -MD -MT CMakeFiles/cmTC_c6291.dir/src.cxx.o -MF CMakeFiles/cmTC_c6291.dir/src.cxx.o.d -o CMakeFiles/cmTC_c6291.dir/src.cxx.o -c /home/kis/server/Projekte/Gravity/cmake-build-release-clang/CMakeFiles/CMakeTmp/src.cxx
+clang-13: warning: -lX11: 'linker' input unused [-Wunused-command-line-argument]
+clang-13: warning: -lGL: 'linker' input unused [-Wunused-command-line-argument]
+clang-13: warning: -lpthread: 'linker' input unused [-Wunused-command-line-argument]
+clang-13: warning: -lpng: 'linker' input unused [-Wunused-command-line-argument]
+clang-13: warning: -lstdc++fs: 'linker' input unused [-Wunused-command-line-argument]
+Linking CXX executable cmTC_c6291
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c6291.dir/link.txt --verbose=1
+/usr/bin/clang++ -lX11 -lGL -lpthread -lpng -lstdc++fs  CMakeFiles/cmTC_c6291.dir/src.cxx.o -o cmTC_c6291 
+make[1]: Verzeichnis „/home/kis/server/Projekte/Gravity/cmake-build-release-clang/CMakeFiles/CMakeTmp“ wird verlassen
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+

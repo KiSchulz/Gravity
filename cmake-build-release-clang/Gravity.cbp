@@ -96,10 +96,10 @@
 		<Unit filename="/home/kis/server/Projekte/Gravity/Model/Entity.h">
 			<Option target="Gravity"/>
 		</Unit>
-		<Unit filename="/home/kis/server/Projekte/Gravity/Model/World.cpp">
+		<Unit filename="/home/kis/server/Projekte/Gravity/Model/World.cu">
 			<Option target="Gravity"/>
 		</Unit>
-		<Unit filename="/home/kis/server/Projekte/Gravity/Model/World.h">
+		<Unit filename="/home/kis/server/Projekte/Gravity/Model/World.cuh">
 			<Option target="Gravity"/>
 		</Unit>
 		<Unit filename="/home/kis/server/Projekte/Gravity/Utility/Vec3.cpp">

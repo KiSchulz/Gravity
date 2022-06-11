@@ -8,6 +8,7 @@
 struct Vec3 {
     float x, y, z;
 
+    Vec3() = default;
     explicit Vec3 (float len);
     Vec3(float x, float y, float z);
 

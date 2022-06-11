@@ -35,7 +35,7 @@ void Renderer::UpdateScreen(float dt) {
          << "flipped: " << flip;
     DrawString({0, 10}, text.str());
 
-    for (auto el: world.getEntities()) {
+    for (const auto el: world.getEntities()) {
         if (flip) {
             Draw(el.pos.x + ScreenWidth() / 2, ScreenHeight() / 2 - el.pos.y);
         } else {

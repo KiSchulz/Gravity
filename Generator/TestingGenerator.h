@@ -13,7 +13,7 @@
 
 struct TestingGenerator : public BaseGenerator {
     World generate() override {
-        const std::size_t numEntities = 1000;
+        const std::size_t numEntities = 100000;
         Entity center{{0, 0, 0}, {0, 0, 0}, 1e12};
         std::vector<Entity> entities = {center};
         entities.reserve(numEntities);
@@ -39,7 +39,7 @@ struct TestingGenerator : public BaseGenerator {
 
             float mass = massDistribution(rng);
 
-            entities.emplace_back(pos, dir, mass);
+            entities.emplace_back(Entity{pos, dir, mass});
         }
 
         return World{entities};

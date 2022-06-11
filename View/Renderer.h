@@ -9,7 +9,7 @@
 #include <cstdint>
 
 #include "olcPixelGameEngine/olcPixelGameEngine.h"
-#include "Model/World.h"
+#include "Model/World.cuh"
 
 class Renderer : public olc::PixelGameEngine {
     World& world;

@@ -5,7 +5,7 @@
 #ifndef GRAVITY_BASEGENERATOR_H
 #define GRAVITY_BASEGENERATOR_H
 
-#include "Model/World.h"
+#include "Model/World.cuh"
 
 class BaseGenerator {
 public:

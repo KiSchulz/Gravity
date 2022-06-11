@@ -83,19 +83,19 @@ CMakeFiles/Gravity.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gravity.dir/main.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kis/server/Projekte/Gravity/main.cpp -o CMakeFiles/Gravity.dir/main.cpp.s
 
-CMakeFiles/Gravity.dir/Model/World.cpp.o: CMakeFiles/Gravity.dir/flags.make
-CMakeFiles/Gravity.dir/Model/World.cpp.o: ../Model/World.cpp
-CMakeFiles/Gravity.dir/Model/World.cpp.o: CMakeFiles/Gravity.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kis/server/Projekte/Gravity/cmake-build-release-clang/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Gravity.dir/Model/World.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Gravity.dir/Model/World.cpp.o -MF CMakeFiles/Gravity.dir/Model/World.cpp.o.d -o CMakeFiles/Gravity.dir/Model/World.cpp.o -c /home/kis/server/Projekte/Gravity/Model/World.cpp
+CMakeFiles/Gravity.dir/Model/World.cu.o: CMakeFiles/Gravity.dir/flags.make
+CMakeFiles/Gravity.dir/Model/World.cu.o: ../Model/World.cu
+CMakeFiles/Gravity.dir/Model/World.cu.o: CMakeFiles/Gravity.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kis/server/Projekte/Gravity/cmake-build-release-clang/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CUDA object CMakeFiles/Gravity.dir/Model/World.cu.o"
+	/opt/cuda/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT CMakeFiles/Gravity.dir/Model/World.cu.o -MF CMakeFiles/Gravity.dir/Model/World.cu.o.d -x cu -c /home/kis/server/Projekte/Gravity/Model/World.cu -o CMakeFiles/Gravity.dir/Model/World.cu.o
 
-CMakeFiles/Gravity.dir/Model/World.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gravity.dir/Model/World.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kis/server/Projekte/Gravity/Model/World.cpp > CMakeFiles/Gravity.dir/Model/World.cpp.i
+CMakeFiles/Gravity.dir/Model/World.cu.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/Gravity.dir/Model/World.cu.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
 
-CMakeFiles/Gravity.dir/Model/World.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gravity.dir/Model/World.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kis/server/Projekte/Gravity/Model/World.cpp -o CMakeFiles/Gravity.dir/Model/World.cpp.s
+CMakeFiles/Gravity.dir/Model/World.cu.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CUDA source to assembly CMakeFiles/Gravity.dir/Model/World.cu.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
 
 CMakeFiles/Gravity.dir/View/Renderer.cpp.o: CMakeFiles/Gravity.dir/flags.make
 CMakeFiles/Gravity.dir/View/Renderer.cpp.o: ../View/Renderer.cpp
@@ -142,7 +142,7 @@ CMakeFiles/Gravity.dir/Model/Entity.cpp.s: cmake_force
 # Object files for target Gravity
 Gravity_OBJECTS = \
 "CMakeFiles/Gravity.dir/main.cpp.o" \
-"CMakeFiles/Gravity.dir/Model/World.cpp.o" \
+"CMakeFiles/Gravity.dir/Model/World.cu.o" \
 "CMakeFiles/Gravity.dir/View/Renderer.cpp.o" \
 "CMakeFiles/Gravity.dir/Utility/Vec3.cpp.o" \
 "CMakeFiles/Gravity.dir/Model/Entity.cpp.o"
@@ -151,12 +151,11 @@ Gravity_OBJECTS = \
 Gravity_EXTERNAL_OBJECTS =
 
 Gravity: CMakeFiles/Gravity.dir/main.cpp.o
-Gravity: CMakeFiles/Gravity.dir/Model/World.cpp.o
+Gravity: CMakeFiles/Gravity.dir/Model/World.cu.o
 Gravity: CMakeFiles/Gravity.dir/View/Renderer.cpp.o
 Gravity: CMakeFiles/Gravity.dir/Utility/Vec3.cpp.o
 Gravity: CMakeFiles/Gravity.dir/Model/Entity.cpp.o
 Gravity: CMakeFiles/Gravity.dir/build.make
-Gravity: /opt/cuda/lib64/libOpenCL.so
 Gravity: CMakeFiles/Gravity.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kis/server/Projekte/Gravity/cmake-build-release-clang/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Gravity"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Gravity.dir/link.txt --verbose=$(VERBOSE)

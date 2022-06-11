@@ -1,9 +1,7 @@
 #define OLC_PGE_APPLICATION
 
-#include <iostream>
-
 #include "Generator/TestingGenerator.h"
-#include "Model/World.h"
+#include "Model/World.cuh"
 #include "View/Renderer.h"
 
 int main() {

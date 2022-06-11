@@ -2,13 +2,13 @@
 // Created by kis on 24.05.22.
 //
 
-#ifndef GRAVITY_WORLD_H
-#define GRAVITY_WORLD_H
+#ifndef GRAVITY_WORLD_CUH
+#define GRAVITY_WORLD_CUH
 
 #include <vector>
+#include <vector_types.h>
 
 #include "Entity.h"
-#include <CL/cl.h>
 
 class World {
 public:
@@ -17,10 +17,14 @@ public:
     float timePassed = 0; //s
 
 private:
-    std::vector<Entity> entities;
+    std::size_t size;
+    float3* g_pos;
+    float3* g_movDir;
+    float* g_mass;
 
 public:
     explicit World(std::vector<Entity> entities);
+    ~World();
 
     void step();
 
@@ -28,4 +32,4 @@ public:
 };
 
 
-#endif //GRAVITY_WORLD_H
+#endif //GRAVITY_WORLD_CUH

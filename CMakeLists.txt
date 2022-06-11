@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.23)
-project(Gravity)
+project(Gravity LANGUAGES CXX CUDA)
 
 set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CUDA_STANDARD 17)
 
 if (NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
@@ -12,8 +13,8 @@ set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g -fno-omit-frame-pointer")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3 -march=native -mtune=native -mavx")
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(OpenCL REQUIRED)
+find_package(CUDA)
 
-add_executable(Gravity main.cpp Model/World.cpp Model/World.h View/Renderer.cpp View/Renderer.h Utility/Vec3.cpp Utility/Vec3.h Model/Entity.cpp Model/Entity.h Generator/BaseGenerator.h Generator/TestingGenerator.h)
-include_directories(.)
-target_link_libraries(Gravity OpenCL::OpenCL)
+add_executable(Gravity main.cpp Model/World.cu Model/World.cuh View/Renderer.cpp View/Renderer.h Utility/Vec3.cpp Utility/Vec3.h Model/Entity.cpp Model/Entity.h Generator/BaseGenerator.h Generator/TestingGenerator.h)
+include_directories(. /opt/cuda/include/)
+#target_link_libraries(Gravity /opt/cuda/lib64/libcuda.so)
