@@ -81,9 +81,9 @@ __global__ void calcAcc(std::size_t size, const float3 *pos, const float *mass, 
             float3 dist = pos[i] - pos[index];
             float len = norm(dist);
 
-            float fg = (gravConst * mass[index] * mass[i]) / (len * len);
+            float fg = (gravConst * mass[index] * mass[i]) / (len * len * len);
 
-            return dist * (1 / len) * fg;
+            return dist * fg;
         };
 
         accVec[index] = make_float3(0, 0, 0);
