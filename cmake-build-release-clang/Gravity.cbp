@@ -5,7 +5,7 @@
 		<Option title="Gravity"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="clang"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\share\;CMake Files\..\..\..\..\..\usr\share\eigen3\;CMake Files\..\..\..\..\..\usr\share\eigen3\cmake\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/kis/server/Projekte/Gravity/cmake-build-release-clang"/>
@@ -26,6 +26,7 @@
 				<Compiler>
 					<Add directory="/home/kis/server/Projekte/Gravity/."/>
 					<Add directory="/opt/cuda/include"/>
+					<Add directory="/home/kis/server/Projekte/Gravity/EIGEN3_INCLUDE_DIRS"/>
 					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0"/>
 					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/backward"/>
@@ -49,6 +50,7 @@
 				<Compiler>
 					<Add directory="/home/kis/server/Projekte/Gravity/."/>
 					<Add directory="/opt/cuda/include"/>
+					<Add directory="/home/kis/server/Projekte/Gravity/EIGEN3_INCLUDE_DIRS"/>
 					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0"/>
 					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/backward"/>
@@ -119,6 +121,15 @@
 		</Unit>
 		<Unit filename="/home/kis/server/Projekte/Gravity/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/kis/server/Projekte/Gravity/../../../../../usr/share/eigen3/cmake/Eigen3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\share\eigen3\cmake\"/>
+		</Unit>
+		<Unit filename="/home/kis/server/Projekte/Gravity/../../../../../usr/share/eigen3/cmake/Eigen3ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\share\eigen3\cmake\"/>
+		</Unit>
+		<Unit filename="/home/kis/server/Projekte/Gravity/../../../../../usr/share/eigen3/cmake/Eigen3Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\share\eigen3\cmake\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

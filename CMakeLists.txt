@@ -14,7 +14,7 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O3 -march=native -mtune=native -mavx")
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(CUDA)
+find_package(Eigen3)
 
 add_executable(Gravity main.cpp Model/World.cu Model/World.cuh View/Renderer.cpp View/Renderer.h Utility/Vec3.cpp Utility/Vec3.h Model/Entity.cpp Model/Entity.h Generator/BaseGenerator.h Generator/TestingGenerator.h)
-include_directories(. /opt/cuda/include/)
-#target_link_libraries(Gravity /opt/cuda/lib64/libcuda.so)
+include_directories(. /opt/cuda/include/ EIGEN3_INCLUDE_DIRS)

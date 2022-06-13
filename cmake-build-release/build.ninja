@@ -52,35 +52,35 @@ build cmake_object_order_depends_target_Gravity: phony || CMakeFiles/Gravity.dir
 build CMakeFiles/Gravity.dir/main.cpp.o: CXX_COMPILER__Gravity_Release /home/kis/server/Projekte/Gravity/main.cpp || cmake_object_order_depends_target_Gravity
   DEP_FILE = CMakeFiles/Gravity.dir/main.cpp.o.d
   FLAGS = -lX11 -lGL -lpthread -lpng -lstdc++fs -O3 -march=native -mtune=native -mavx -std=gnu++20
-  INCLUDES = -I/home/kis/server/Projekte/Gravity/. -I/opt/cuda/include
+  INCLUDES = -I/home/kis/server/Projekte/Gravity/. -I/opt/cuda/include -I/home/kis/server/Projekte/Gravity/EIGEN3_INCLUDE_DIRS
   OBJECT_DIR = CMakeFiles/Gravity.dir
   OBJECT_FILE_DIR = CMakeFiles/Gravity.dir
 
 build CMakeFiles/Gravity.dir/Model/World.cu.o: CUDA_COMPILER__Gravity_Release /home/kis/server/Projekte/Gravity/Model/World.cu || cmake_object_order_depends_target_Gravity
   DEP_FILE = CMakeFiles/Gravity.dir/Model/World.cu.o.d
   FLAGS = -O3 -DNDEBUG --generate-code=arch=compute_52,code=[compute_52,sm_52] -std=c++17
-  INCLUDES = -I/home/kis/server/Projekte/Gravity/. -I/opt/cuda/include
+  INCLUDES = -I/home/kis/server/Projekte/Gravity/. -I/opt/cuda/include -I/home/kis/server/Projekte/Gravity/EIGEN3_INCLUDE_DIRS
   OBJECT_DIR = CMakeFiles/Gravity.dir
   OBJECT_FILE_DIR = CMakeFiles/Gravity.dir/Model
 
 build CMakeFiles/Gravity.dir/View/Renderer.cpp.o: CXX_COMPILER__Gravity_Release /home/kis/server/Projekte/Gravity/View/Renderer.cpp || cmake_object_order_depends_target_Gravity
   DEP_FILE = CMakeFiles/Gravity.dir/View/Renderer.cpp.o.d
   FLAGS = -lX11 -lGL -lpthread -lpng -lstdc++fs -O3 -march=native -mtune=native -mavx -std=gnu++20
-  INCLUDES = -I/home/kis/server/Projekte/Gravity/. -I/opt/cuda/include
+  INCLUDES = -I/home/kis/server/Projekte/Gravity/. -I/opt/cuda/include -I/home/kis/server/Projekte/Gravity/EIGEN3_INCLUDE_DIRS
   OBJECT_DIR = CMakeFiles/Gravity.dir
   OBJECT_FILE_DIR = CMakeFiles/Gravity.dir/View
 
 build CMakeFiles/Gravity.dir/Utility/Vec3.cpp.o: CXX_COMPILER__Gravity_Release /home/kis/server/Projekte/Gravity/Utility/Vec3.cpp || cmake_object_order_depends_target_Gravity
   DEP_FILE = CMakeFiles/Gravity.dir/Utility/Vec3.cpp.o.d
   FLAGS = -lX11 -lGL -lpthread -lpng -lstdc++fs -O3 -march=native -mtune=native -mavx -std=gnu++20
-  INCLUDES = -I/home/kis/server/Projekte/Gravity/. -I/opt/cuda/include
+  INCLUDES = -I/home/kis/server/Projekte/Gravity/. -I/opt/cuda/include -I/home/kis/server/Projekte/Gravity/EIGEN3_INCLUDE_DIRS
   OBJECT_DIR = CMakeFiles/Gravity.dir
   OBJECT_FILE_DIR = CMakeFiles/Gravity.dir/Utility
 
 build CMakeFiles/Gravity.dir/Model/Entity.cpp.o: CXX_COMPILER__Gravity_Release /home/kis/server/Projekte/Gravity/Model/Entity.cpp || cmake_object_order_depends_target_Gravity
   DEP_FILE = CMakeFiles/Gravity.dir/Model/Entity.cpp.o.d
   FLAGS = -lX11 -lGL -lpthread -lpng -lstdc++fs -O3 -march=native -mtune=native -mavx -std=gnu++20
-  INCLUDES = -I/home/kis/server/Projekte/Gravity/. -I/opt/cuda/include
+  INCLUDES = -I/home/kis/server/Projekte/Gravity/. -I/opt/cuda/include -I/home/kis/server/Projekte/Gravity/EIGEN3_INCLUDE_DIRS
   OBJECT_DIR = CMakeFiles/Gravity.dir
   OBJECT_FILE_DIR = CMakeFiles/Gravity.dir/Model
 
@@ -146,14 +146,14 @@ build all: phony Gravity
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /usr/share/cmake/Modules/CMakeCUDAInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake/Modules/CheckIncludeFileCXX.cmake /usr/share/cmake/Modules/CheckLibraryExists.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/Compiler/NVIDIA-CUDA.cmake /usr/share/cmake/Modules/FindCUDA.cmake /usr/share/cmake/Modules/FindCUDA/select_compute_arch.cmake /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake/Modules/FindPackageMessage.cmake /usr/share/cmake/Modules/FindThreads.cmake /usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.1/CMakeCUDACompiler.cmake CMakeFiles/3.23.1/CMakeCXXCompiler.cmake CMakeFiles/3.23.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /usr/share/cmake/Modules/CMakeCUDAInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake/Modules/CheckIncludeFileCXX.cmake /usr/share/cmake/Modules/CheckLibraryExists.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/Compiler/NVIDIA-CUDA.cmake /usr/share/cmake/Modules/FindCUDA.cmake /usr/share/cmake/Modules/FindCUDA/select_compute_arch.cmake /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake/Modules/FindPackageMessage.cmake /usr/share/cmake/Modules/FindThreads.cmake /usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake /usr/share/eigen3/cmake/Eigen3Config.cmake /usr/share/eigen3/cmake/Eigen3ConfigVersion.cmake /usr/share/eigen3/cmake/Eigen3Targets.cmake CMakeCache.txt CMakeFiles/3.23.1/CMakeCUDACompiler.cmake CMakeFiles/3.23.1/CMakeCXXCompiler.cmake CMakeFiles/3.23.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt /usr/share/cmake/Modules/CMakeCUDAInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake/Modules/CheckIncludeFileCXX.cmake /usr/share/cmake/Modules/CheckLibraryExists.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/Compiler/NVIDIA-CUDA.cmake /usr/share/cmake/Modules/FindCUDA.cmake /usr/share/cmake/Modules/FindCUDA/select_compute_arch.cmake /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake/Modules/FindPackageMessage.cmake /usr/share/cmake/Modules/FindThreads.cmake /usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.1/CMakeCUDACompiler.cmake CMakeFiles/3.23.1/CMakeCXXCompiler.cmake CMakeFiles/3.23.1/CMakeSystem.cmake: phony
+build ../CMakeLists.txt /usr/share/cmake/Modules/CMakeCUDAInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake/Modules/CheckIncludeFileCXX.cmake /usr/share/cmake/Modules/CheckLibraryExists.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/Compiler/NVIDIA-CUDA.cmake /usr/share/cmake/Modules/FindCUDA.cmake /usr/share/cmake/Modules/FindCUDA/select_compute_arch.cmake /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake/Modules/FindPackageMessage.cmake /usr/share/cmake/Modules/FindThreads.cmake /usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake /usr/share/eigen3/cmake/Eigen3Config.cmake /usr/share/eigen3/cmake/Eigen3ConfigVersion.cmake /usr/share/eigen3/cmake/Eigen3Targets.cmake CMakeCache.txt CMakeFiles/3.23.1/CMakeCUDACompiler.cmake CMakeFiles/3.23.1/CMakeCXXCompiler.cmake CMakeFiles/3.23.1/CMakeSystem.cmake: phony
 
 
 #############################################

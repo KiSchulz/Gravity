@@ -6,9 +6,9 @@
 #define GRAVITY_WORLD_CUH
 
 #include <vector>
-#include <vector_types.h>
 
 #include "Entity.h"
+#include "Utility/Vec3.h"
 
 class World {
 public:
@@ -18,8 +18,8 @@ public:
 
 private:
     std::size_t size;
-    float3* g_pos;
-    float3* g_movDir;
+    Vec3* g_pos;
+    Vec3* g_movDir;
     float* g_mass;
 
 public:
