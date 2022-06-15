@@ -7,24 +7,32 @@
 
 #include <vector>
 #include <cstdint>
+#include <thread>
 
 #include "olcPixelGameEngine/olcPixelGameEngine.h"
 #include "Model/World.cuh"
 
 class Renderer : public olc::PixelGameEngine {
-    World& world;
+    std::thread simThread;
+    bool run = true;
+
+    World &world;
     bool flip;
+    float zoom = 1.0f;
+
+    void runSimThread();
+
 public:
-    explicit Renderer (World& world);
+    explicit Renderer(World &world);
+    ~Renderer() override;
 
     bool OnUserCreate() override;
-    bool OnUserUpdate(float dt) override;
 
-    void UpdateWorld();
+    bool OnUserUpdate(float dt) override;
 
     void ReadKeys();
 
-    void UpdateScreen(float dt);
+    void UpdateScreen();
 };
 
 

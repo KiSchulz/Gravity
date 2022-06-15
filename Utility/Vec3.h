@@ -6,9 +6,9 @@
 #define GRAVITY_VEC3_H
 
 #undef Success
-#include <Eigen>
+#include <Eigen/Dense>
 
-using Vec3 = Eigen::Vec3f;
+using Vec3 = Eigen::Vector3f;
 
 //struct Vec3 {
 //    float x, y, z;

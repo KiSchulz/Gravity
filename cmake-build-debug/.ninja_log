@@ -1,9 +1,8 @@
 # ninja log v5
-17	2744	1655041008000000000	CMakeFiles/Gravity.dir/main.cpp.o	a4828e5a95373698
-17	1552	1655041007000000000	CMakeFiles/Gravity.dir/View/Renderer.cpp.o	b15bc8f736008d81
-5	1353	1655041035000000000	CMakeFiles/Gravity.dir/Model/World.cu.o	441a68d5f5956aa0
-7	206	1655135897000000000	build.ninja	7930ee332df0ffd4
-1355	2123	1655041036000000000	Gravity	b20cefb1d784fe01
-2	472	1654888255000000000	CMakeFiles/Gravity.dir/Model/World.cpp.o	c7ffafafcf8bb95b
-17	461	1655041005000000000	CMakeFiles/Gravity.dir/Utility/Vec3.cpp.o	1e21b2de6e8fcc6a
-17	82	1655041005000000000	CMakeFiles/Gravity.dir/Model/Entity.cpp.o	3ab1f8be57900716
+37	3458	1655136458000000000	CMakeFiles/Gravity.dir/main.cpp.o	c3ab234fe8dbd32b
+37	2005	1655136457000000000	CMakeFiles/Gravity.dir/View/Renderer.cpp.o	3724d5385742cfec
+37	3648	1655136458000000000	CMakeFiles/Gravity.dir/Model/World.cu.o	44abb6c9c1bcb7a
+7	206	1655204139000000000	build.ninja	7930ee332df0ffd4
+3648	4381	1655136459000000000	Gravity	63aceb679911dcb2
+37	1451	1655136456000000000	CMakeFiles/Gravity.dir/Utility/Vec3.cpp.o	6109ddddbe1b5ab5
+37	1406	1655136456000000000	CMakeFiles/Gravity.dir/Model/Entity.cpp.o	c282220b7e61b978

@@ -26,7 +26,7 @@
 				<Compiler>
 					<Add directory="/home/kis/server/Projekte/Gravity/."/>
 					<Add directory="/opt/cuda/include"/>
-					<Add directory="/home/kis/server/Projekte/Gravity/EIGEN3_INCLUDE_DIRS"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0"/>
 					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/backward"/>
@@ -50,7 +50,7 @@
 				<Compiler>
 					<Add directory="/home/kis/server/Projekte/Gravity/."/>
 					<Add directory="/opt/cuda/include"/>
-					<Add directory="/home/kis/server/Projekte/Gravity/EIGEN3_INCLUDE_DIRS"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0"/>
 					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/backward"/>

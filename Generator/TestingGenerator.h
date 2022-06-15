@@ -13,16 +13,16 @@
 
 struct TestingGenerator : public BaseGenerator {
     World generate() override {
-        const std::size_t numEntities = 1000;
+        const std::size_t numEntities = 10000;
         Entity center{{0, 0, 0}, {0, 0, 0}, 1e12};
         std::vector<Entity> entities = {center};
-        entities.reserve(numEntities);
+        entities.reserve(numEntities + 1);
 
         std::random_device device;
         std::mt19937 rng(device());
-        std::uniform_real_distribution<float> posDistribution(-200, 200);
+        std::uniform_real_distribution<float> posDistribution(-100, 100);
         std::uniform_real_distribution<float> dirDistribution(-1, 1);
-        std::uniform_real_distribution<float> massDistribution(1, 1e8);
+        std::normal_distribution<float> massDistribution(1e4, 1e2 );
 
         for (std::size_t i = 0; i < numEntities; i++) {
             Vec3 pos{posDistribution(rng), posDistribution(rng), posDistribution(rng)};
@@ -31,7 +31,7 @@ struct TestingGenerator : public BaseGenerator {
 
             float x = dirDistribution(rng);
             float y = dirDistribution(rng);
-            float z = (-x * relPos.x - y * relPos.y) / relPos.z;
+            float z = (-x * relPos.x() - y * relPos.y()) / relPos.z();
 
             Vec3 dir{x, y, z};
             dir.normalize();

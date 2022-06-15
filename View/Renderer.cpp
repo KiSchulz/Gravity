@@ -11,51 +11,72 @@ Renderer::Renderer(World &world) : world(world), flip(false) {
 }
 
 bool Renderer::OnUserCreate() {
+    simThread = std::thread{&Renderer::runSimThread, this};
     return true;
 }
 
 bool Renderer::OnUserUpdate(float dt) {
     ReadKeys();
 
-    UpdateWorld();
-
-    UpdateScreen(dt);
+    UpdateScreen();
 
     return true;
 }
 
-void Renderer::UpdateScreen(float dt) {
+void Renderer::UpdateScreen() {
     Clear(olc::BLANK);
 
     std::stringstream text;
     text << std::fixed
          << "time: " << world.timePassed << ", "
-         << "speedup: " << world.timeStepSize * (1 / dt) << ", "
+         << "speedup: " << world.getSpeedup() << ", "
          << "step size: " << world.timeStepSize << ", "
-         << "flipped: " << flip;
+         << "flipped: " << flip << ", "
+         << "zoom: " << zoom;
     DrawString({0, 10}, text.str());
 
-    for (const auto el: world.getEntities()) {
+    const auto vec = world.getPosVec();
+    float width = (float) ScreenHeight() / 2;
+    auto first = vec[0];
+
+    for (auto &i: vec) {
+        float x = (i.x() - first.x()) * zoom + width;
+        float y = width;
+
         if (flip) {
-            Draw(el.pos.x + ScreenWidth() / 2, ScreenHeight() / 2 - el.pos.y);
+            y -= (i.y() - first.y()) * zoom;
         } else {
-            Draw(el.pos.x + ScreenWidth() / 2, ScreenHeight() / 2 - el.pos.z);
+            y -= (i.z() - first.z()) * zoom;
         }
+        Draw((int) x, (int) y);
     }
 }
 
 void Renderer::ReadKeys() {
-    if (GetKey(olc::UP).bPressed) {
-        world.timeStepSize *= 1.25;
+    if (GetKey(olc::D).bPressed) {
+        world.timeStepSize = (float) std::min(0.3, world.timeStepSize * 1.25);
     }
-    if (GetKey(olc::DOWN).bPressed) {
-        world.timeStepSize /= 1.25;
+    if (GetKey(olc::A).bPressed) {
+        world.timeStepSize = (float) std::max(0.00000001, world.timeStepSize / 1.25);
     }
-    if (GetKey(olc::Z).bPressed) {
+    if (GetKey(olc::F).bPressed) {
         flip = !flip;
+    }
+    if (GetKey(olc::W).bPressed) {
+        zoom *= 1.25f;
+    }
+    if (GetKey(olc::S).bPressed) {
+        zoom /= 1.25f;
     }
 }
 
-void Renderer::UpdateWorld() {
-    world.step();
+void Renderer::runSimThread() {
+    while (run) {
+        world.step();
+    }
+}
+
+Renderer::~Renderer() {
+    run = false;
+    simThread.join();
 }
