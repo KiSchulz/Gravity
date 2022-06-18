@@ -16,8 +16,9 @@ bool Renderer::OnUserCreate() {
 }
 
 bool Renderer::OnUserUpdate(float dt) {
-    ReadKeys();
+    std::this_thread::sleep_for(std::chrono::milliseconds((int) std::max(0.0f, (16.6f - dt))));
 
+    ReadKeys();
     UpdateScreen();
 
     return true;
@@ -26,16 +27,8 @@ bool Renderer::OnUserUpdate(float dt) {
 void Renderer::UpdateScreen() {
     Clear(olc::BLANK);
 
-    std::stringstream text;
-    text << std::fixed
-         << "time: " << world.timePassed << ", "
-         << "speedup: " << world.getSpeedup() << ", "
-         << "step size: " << world.timeStepSize << ", "
-         << "flipped: " << flip << ", "
-         << "zoom: " << zoom;
-    DrawString({0, 10}, text.str());
-
     const auto vec = world.getPosVec();
+
     float width = (float) ScreenHeight() / 2;
     auto first = vec[0];
 
@@ -50,14 +43,23 @@ void Renderer::UpdateScreen() {
         }
         Draw((int) x, (int) y);
     }
+
+    std::stringstream text;
+    text << std::fixed
+         << "time: " << world.getTimePassed() << ", "
+         << "speedup: " << speedUp << ", "
+         << "step size: " << World::timeStepSize << ", "
+         << "flipped: " << flip << ", "
+         << "zoom: " << zoom;
+    DrawString({0, 10}, text.str());
 }
 
 void Renderer::ReadKeys() {
     if (GetKey(olc::D).bPressed) {
-        world.timeStepSize = (float) std::min(0.3, world.timeStepSize * 1.25);
+        delay = std::max(0, delay - 1);
     }
     if (GetKey(olc::A).bPressed) {
-        world.timeStepSize = (float) std::max(0.00000001, world.timeStepSize / 1.25);
+        delay++;
     }
     if (GetKey(olc::F).bPressed) {
         flip = !flip;
@@ -71,8 +73,17 @@ void Renderer::ReadKeys() {
 }
 
 void Renderer::runSimThread() {
+    namespace sc = std::chrono;
+    using namespace sc;
     while (run) {
+        time_point start = high_resolution_clock::now();
+
+        std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+
         world.step();
+
+        speedUp = (World::timeStepSize * 1e9f) /
+                  (float) duration_cast<nanoseconds>(high_resolution_clock::now() - start).count();
     }
 }
 

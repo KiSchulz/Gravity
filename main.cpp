@@ -1,6 +1,7 @@
 #define OLC_PGE_APPLICATION
 
 #include "Generator/TestingGenerator.h"
+#include "Generator/SolarSystem.h"
 #include "Model/World.cuh"
 #include "View/Renderer.h"
 

@@ -16,6 +16,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(CUDA)
 find_package(Eigen3 3.3 REQUIRED NO_MODULES)
 
-add_executable(Gravity main.cpp Model/World.cu Model/World.cuh View/Renderer.cpp View/Renderer.h Utility/Vec3.cpp Utility/Vec3.h Model/Entity.cpp Model/Entity.h Generator/BaseGenerator.h Generator/TestingGenerator.h)
+add_executable(Gravity main.cpp Model/World.cu Model/World.cuh View/Renderer.cpp View/Renderer.h Utility/Vec3.cpp Utility/Vec3.h Model/Entity.cpp Model/Entity.h Generator/BaseGenerator.h Generator/TestingGenerator.h Generator/SolarSystem.h)
 include_directories(. /opt/cuda/include/)
 target_link_libraries(Gravity Eigen3::Eigen)

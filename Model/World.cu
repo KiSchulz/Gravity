@@ -3,7 +3,6 @@
 //
 
 #include <vector>
-#include <chrono>
 
 #include "World.cuh"
 
@@ -12,8 +11,6 @@ World::World(std::vector<Entity> entities) : size(entities.size()) {
     cudaMalloc(&g_movDir, sizeof(Vec3) * size);
     cudaMalloc(&g_mass, sizeof(float) * size);
     cudaMalloc(&g_accVec, sizeof(Vec3) * size);
-
-    posVec.resize(size);
 
     std::vector<Vec3> buffV3;
     buffV3.resize(size);
@@ -70,10 +67,6 @@ __global__ void updatePos(std::size_t size, const Vec3 *accVec, Vec3 *movDir, Ve
 }
 
 void World::step() {
-    namespace sc = std::chrono;
-    using namespace sc;
-    time_point start = high_resolution_clock::now();
-
     std::size_t blockSize = 256;
     std::size_t numBlocks = (size + blockSize - 1) / blockSize;
 
@@ -82,18 +75,32 @@ void World::step() {
 
     updatePos<<<numBlocks, blockSize>>>(size, g_accVec, g_movDir, g_pos, timeStepSize);
 
-    timePassed += timeStepSize;
+    timePassed++;
 
     cudaDeviceSynchronize();
-
-    speedup = timeStepSize / ((double) duration_cast<nanoseconds>(high_resolution_clock::now() - start).count() / 1e9f);
 }
 
 std::vector<Vec3> World::getPosVec() const {
-    cudaMemcpy((void *) posVec.data(), g_pos, sizeof(Vec3) * size, cudaMemcpyDeviceToHost);
-    return posVec;
+    std::vector<Vec3> buff;
+    buff.resize(size);
+    cudaMemcpy((void *) buff.data(), g_pos, sizeof(Vec3) * size, cudaMemcpyDeviceToHost);
+    return buff;
 }
 
-double World::getSpeedup() const {
-    return speedup;
+std::vector<Vec3> World::getMovDirVec() const {
+    std::vector<Vec3> buff;
+    buff.resize(size);
+    cudaMemcpy((void *) buff.data(), g_movDir, sizeof(Vec3) * size, cudaMemcpyDeviceToHost);
+    return buff;
+}
+
+std::vector<float> World::getMassVec() const {
+    std::vector<float> buff;
+    buff.resize(size);
+    cudaMemcpy((void *) buff.data(), g_mass, sizeof(float) * size, cudaMemcpyDeviceToHost);
+    return buff;
+}
+
+double World::getTimePassed() const {
+    return timeStepSize * (double) timePassed;
 }
