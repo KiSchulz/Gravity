@@ -6,6 +6,7 @@
 #include "View/Renderer.h"
 
 int main() {
+   //SolarSystem t;
    TestingGenerator t;
    World world{t.generate()};
    Renderer renderer(world);

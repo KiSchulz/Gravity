@@ -13,7 +13,7 @@
 
 struct TestingGenerator : public BaseGenerator {
     World generate() override {
-        const std::size_t numEntities = 100;
+        const std::size_t numEntities = 20000;
         Entity center{{0, 0, 0}, {0, 0, 0}, 1e12};
         std::vector<Entity> entities = {center};
         entities.reserve(numEntities + 1);
@@ -22,7 +22,7 @@ struct TestingGenerator : public BaseGenerator {
         std::mt19937 rng(device());
         std::uniform_real_distribution<float> posDistribution(-100, 100);
         std::uniform_real_distribution<float> dirDistribution(-1, 1);
-        std::normal_distribution<float> massDistribution(1e4, 1e2);
+        std::normal_distribution<float> massDistribution(1e2, 1e4);
 
         for (std::size_t i = 0; i < numEntities; i++) {
             Vec3 pos{posDistribution(rng), posDistribution(rng), posDistribution(rng)};

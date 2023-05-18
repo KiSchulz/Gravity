@@ -13,7 +13,7 @@
 class World {
 public:
     static constexpr float gravityConstant = 6.67408e-11; //m^3*kg^-1*s^-2
-    static constexpr float timeStepSize = 0.3; //s
+    static constexpr float timeStepSize = 1; //60*60*24; //s e.g. 0.3f //s
 
 private:
     std::size_t size;
