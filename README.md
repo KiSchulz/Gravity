@@ -1,6 +1,8 @@
+<pre>
 A simple n-body simulation using cuda.
-<br>
-Controls:<br>
-  &nbsp;W, S  to zoom<br>
-  A, D  to speed up and slow down the simulation<br>
-  F     to flip the y and z<br>
+
+Controls:
+  W, S  to zoom
+  A, D  to speed up and slow down the simulation
+  F     to flip the y and z
+</pre>
