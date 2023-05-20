@@ -13,7 +13,7 @@
 
 struct TestingGenerator : public BaseGenerator {
     World generate() override {
-        const std::size_t numEntities = 20000;
+        const std::size_t numEntities = 200;
         Entity center{{0, 0, 0}, {0, 0, 0}, 1e12};
         std::vector<Entity> entities = {center};
         entities.reserve(numEntities + 1);
