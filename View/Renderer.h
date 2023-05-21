@@ -18,7 +18,7 @@ class Renderer : public olc::PixelGameEngine {
 
     World &world;
     bool flip;
-    float zoom = 1.0f;
+    float zoom = 1;
     float speedUp = 0;
     int delay = 0;
 

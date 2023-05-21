@@ -56,10 +56,10 @@ void Renderer::UpdateScreen() {
 
 void Renderer::ReadKeys() {
     if (GetKey(olc::D).bPressed) {
-        delay = std::max(0, delay - 10);
+        delay = std::max(0, delay - 1);
     }
     if (GetKey(olc::A).bPressed) {
-        delay += 10;
+        delay += 1;
     }
     if (GetKey(olc::F).bPressed) {
         flip = !flip;
