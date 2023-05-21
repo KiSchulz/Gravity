@@ -26,7 +26,6 @@ struct TestingGenerator : public BaseGenerator {
 
         for (std::size_t i = 0; i < numEntities; i++) {
             Vec3 pos{posDistribution(rng), posDistribution(rng), posDistribution(rng)};
-            pos = pos.normalized() * 50;
 
             Vec3 relPos = center.pos - pos;
 
